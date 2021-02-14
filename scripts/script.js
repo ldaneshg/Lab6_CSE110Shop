@@ -1,5 +1,9 @@
 // Script.js
 
 window.addEventListener('DOMContentLoaded', () => {
-  // TODO
+  fetch('https://fakestoreapi.com/products')
+  .then(response => response.json())
+  localStorage.setItem("array", JSON.stringify(response));
+
+  var arr = JSON.parse(localStorage.getItem("array"));
 });
